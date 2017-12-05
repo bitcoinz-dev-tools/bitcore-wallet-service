@@ -38,14 +38,14 @@ var config = {
     },
   },
   blockchainExplorerOpts: {
-    btc: {
+    btcz: {
       livenet: {
         provider: 'insight',
-        url: 'https://insight.bitpay.com:443',
+        url: 'https://bitcoinz.ph:443',
       },
       testnet: {
         provider: 'insight',
-        url: 'https://test-insight.bitpay.com:443',
+        url: 'https://bitcoinz.ph:443',
         // url: 'http://localhost:3001',
         // Multiple servers (in priority order)
         // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
@@ -54,14 +54,14 @@ var config = {
     bch: {
       livenet: {
         provider: 'insight',
-        url: 'https://cashexplorer.bitcoin.com',
+        url: 'https://bch-insight.bitpay.com',
       },
     },
   },
   pushNotificationsOpts: {
     templatePath: './lib/templates',
     defaultLanguage: 'en',
-    defaultUnit: 'btc',
+    defaultUnit: 'btcz',
     subjectPrefix: '',
     pushServerUrl: 'https://fcm.googleapis.com/fcm',
     authorizationKey: '',
@@ -79,7 +79,7 @@ var config = {
   //  from: 'wallet-service@bitcore.io',
   //  templatePath: './lib/templates',
   //  defaultLanguage: 'en',
-  //  defaultUnit: 'btc',
+  //  defaultUnit: 'btcz',
   //  publicTxUrlTemplate: {
   //    livenet: 'https://insight.bitpay.com/tx/{{txid}}',
   //    testnet: 'https://test-insight.bitpay.com/tx/{{txid}}',

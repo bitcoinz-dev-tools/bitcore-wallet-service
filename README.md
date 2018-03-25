@@ -19,6 +19,11 @@ BWS is been used in production enviroments for [Copay Wallet](https://copay.io),
 
 More about BWS at https://blog.bitpay.com/announcing-the-bitcore-wallet-suite/
 
+# Requirements
+
+* Node 6.0 and above
+* MongoDB
+
 # Getting Started
 ```
  git clone https://github.com/bitcoinz-wallets/bitcore-wallet-service-btcz.git
@@ -106,13 +111,9 @@ Returns:
 Returns:
  * The note associated to the `txid` as a string.
 
-`/v1/fiatrates/:code`:  Get the fiat rate for the specified ISO 4217 code.
-Optional Arguments:
- * provider: An identifier representing the source of the rates.
- * ts: The timestamp for the fiat rate (defaults to now).
-
+`/v1/rates/btcz`:  Get the fiat exchat rates for BTCZ
 Returns:
- * The fiat exchange rate.
+ * The fiat exchange rates.
 
 ## POST Endpoints
 `/v1/wallets/`: Create a new Wallet

@@ -41,7 +41,11 @@ var config = {
     btcz: {
       livenet: {
         provider: 'insight',
-        url: 'https://bitcoinz.ph:443',
+        url: [
+          'https://bitcoinz.ph:443',
+          'https://api.btcz.life:443',
+          'https://explorer.btcz.rocks:443'
+        ]
       },
       testnet: {
         provider: 'insight',
@@ -65,10 +69,6 @@ var config = {
     subjectPrefix: '',
     pushServerUrl: 'https://fcm.googleapis.com/fcm',
     authorizationKey: '',
-  },
-  fiatRateServiceOpts: {
-    defaultProvider: 'BitPay',
-    fetchInterval: 60, // in minutes
   },
   // To use email notifications uncomment this:
   // emailOpts: {

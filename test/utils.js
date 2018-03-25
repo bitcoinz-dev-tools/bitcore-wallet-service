@@ -85,7 +85,7 @@ describe('Utils', function() {
         args: [1, 'bit'],
         expected: '0',
       }, {
-        args: [1, 'btc'],
+        args: [1, 'btcz'],
         expected: '0.00',
       }, {
         args: [0, 'bit'],
@@ -94,19 +94,19 @@ describe('Utils', function() {
         args: [12345678, 'bit'],
         expected: '123,457',
       }, {
-        args: [12345678, 'btc'],
+        args: [12345678, 'btcz'],
         expected: '0.123457',
       }, {
-        args: [12345611, 'btc'],
+        args: [12345611, 'btcz'],
         expected: '0.123456',
       }, {
-        args: [1234, 'btc'],
+        args: [1234, 'btcz'],
         expected: '0.000012',
       }, {
-        args: [1299, 'btc'],
+        args: [1299, 'btcz'],
         expected: '0.000013',
       }, {
-        args: [1234567899999, 'btc'],
+        args: [1234567899999, 'btcz'],
         expected: '12,345.679',
       }, {
         args: [12345678, 'bit', {
@@ -114,12 +114,12 @@ describe('Utils', function() {
         }],
         expected: '123.457',
       }, {
-        args: [12345678, 'btc', {
+        args: [12345678, 'btcz', {
           decimalSeparator: ','
         }],
         expected: '0,123457',
       }, {
-        args: [1234567899999, 'btc', {
+        args: [1234567899999, 'btcz', {
           thousandsSeparator: ' ',
           decimalSeparator: ','
         }],
@@ -133,40 +133,12 @@ describe('Utils', function() {
   });
 
   describe('#getAddressCoin', function() {
-    it('should identify btc as coin for 1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA', function() {
-      Utils.getAddressCoin('1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA').should.equal('btc');
+    it('should identify btcz as coin for t1Xxa5ZVPKvs9bGMn7aWTiHjyHvR31XkUst', function() {
+      Utils.getAddressCoin('t1Xxa5ZVPKvs9bGMn7aWTiHjyHvR31XkUst').should.equal('btcz');
     });
-    it('should identify bch as coin for CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz', function() {
-      Utils.getAddressCoin('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz').should.equal('bch');
-    });
-    it('should return null for 1L', function() {
-      should.not.exist(Utils.getAddressCoin('1L'));
+    it('should throw error for t1L', function() {
+      should.Throw(() => Utils.getAddressCoin('t1L'), Error);
     });
   });
- 
 
-  describe('#translateAddress', function() {
-    it('should translate address from btc to bch', function() {
-      var res = Utils.translateAddress('1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA', 'bch');
-      res.should.equal('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz');
-    });
-    it('should translate address from bch to btc', function() {
-      var res = Utils.translateAddress('HBf8isgS8EXG1r3X6GP89FmooUmiJ42wHS', 'btc');
-      res.should.equal('36q2G5FMGvJbPgAVEaiyAsFGmpkhPKwk2r');
-    });
- 
-    it('should keep the address if there is nothing to do (bch)', function() {
-      var res = Utils.translateAddress('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz', 'bch');
-      res.should.equal('CcJ4qUfyQ8x5NwhAeCQkrBSWVeXxXghcNz');
-    });
-    it('should keep the address if there is nothing to do (btc)', function() {
-      var res = Utils.translateAddress('1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA', 'btc');
-      should.exist(res);
-      res.should.equal('1LqBGSKuX5yYUonjxT5qGfpUsXKYYWeabA');
-    });
-
-
-
-  });
-  
 });

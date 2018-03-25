@@ -58,6 +58,7 @@
     "jsdoc": "^3.3.0-beta1",
     "memdown": "^1.0.0",
     "mocha": "^1.18.2",
+    "node-inspector": "^1.1.2",
     "proxyquire": "^1.7.2",
     "sinon": "1.10.3",
     "supertest": "*",
@@ -67,7 +68,8 @@
     "start": "./start.sh",
     "stop": "./stop.sh",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter spec test",
-    "test": "./node_modules/.bin/mocha",
+    "test": "mocha",
+    "debug": "node-inspector & mocha --debug-brk",
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "bitcoreNode": "./bitcorenode",

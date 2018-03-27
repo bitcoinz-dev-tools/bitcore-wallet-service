@@ -14,8 +14,7 @@ var tingodb = require('tingodb')({
 
 var Bitcore = require('bitcore-lib-btcz');
 var Bitcore_ = {
-  btcz: Bitcore,
-  bch: require('bitcore-lib-cash')
+  btcz: Bitcore
 };
 
 var Common = require('../../lib/common');

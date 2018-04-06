@@ -82,7 +82,7 @@ describe('Email notifications', function() {
       helpers.stubUtxos(server, wallet, [1, 1], function() {
         var txOpts = {
           outputs: [{
-            toAddress: '18PzpUFkFZE8zKWUPvfykkTxmB9oMR8qP7',
+            toAddress: 't1h8SqgtM3QM5e2M8EzhhT1yL2PXXtA6oqe',
             amount: 0.8e8
           }],
           feePerKb: 100e2
@@ -119,7 +119,7 @@ describe('Email notifications', function() {
       helpers.stubUtxos(server, wallet, [1, 1], function() {
         var txOpts = {
           outputs: [{
-            toAddress: '18PzpUFkFZE8zKWUPvfykkTxmB9oMR8qP7',
+            toAddress: 't1h8SqgtM3QM5e2M8EzhhT1yL2PXXtA6oqe',
             amount: 0.8e8
           }],
           feePerKb: 100e2
@@ -151,7 +151,7 @@ describe('Email notifications', function() {
       helpers.stubUtxos(server, wallet, [1, 1], function() {
         var txOpts = {
           outputs: [{
-            toAddress: '18PzpUFkFZE8zKWUPvfykkTxmB9oMR8qP7',
+            toAddress: 't1h8SqgtM3QM5e2M8EzhhT1yL2PXXtA6oqe',
             amount: 0.8e8
           }],
           feePerKb: 100e2
@@ -169,7 +169,7 @@ describe('Email notifications', function() {
             txp = t;
             async.eachSeries(_.range(2), function(i, next) {
               var copayer = TestData.copayers[i];
-              helpers.getAuthServer(copayer.id44btc, function(server) {
+              helpers.getAuthServer(copayer.id44btcz, function(server) {
                 var signatures = helpers.clientSign(txp, copayer.xPrivKey_44H_0H_0H);
                 server.signTx({
                   txProposalId: txp.id,
@@ -217,7 +217,7 @@ describe('Email notifications', function() {
       helpers.stubUtxos(server, wallet, 1, function() {
         var txOpts = {
           outputs: [{
-            toAddress: '18PzpUFkFZE8zKWUPvfykkTxmB9oMR8qP7',
+            toAddress: 't1h8SqgtM3QM5e2M8EzhhT1yL2PXXtA6oqe',
             amount: 0.8e8
           }],
           feePerKb: 100e2
@@ -235,7 +235,7 @@ describe('Email notifications', function() {
             txpId = txp.id;
             async.eachSeries(_.range(1, 3), function(i, next) {
               var copayer = TestData.copayers[i];
-              helpers.getAuthServer(copayer.id44btc, function(server) {
+              helpers.getAuthServer(copayer.id44btcz, function(server) {
                 server.rejectTx({
                   txProposalId: txp.id,
                 }, next);
@@ -368,7 +368,7 @@ describe('Email notifications', function() {
       server.savePreferences({
         email: 'copayer1@domain.com',
         language: 'es',
-        unit: 'btc',
+        unit: 'btcz',
       }, function(err) {
         server.createAddress({}, function(err, address) {
           should.not.exist(err);
@@ -419,7 +419,7 @@ describe('Email notifications', function() {
         helpers.stubUtxos(server, wallet, 1, function() {
           var txOpts = {
             outputs: [{
-              toAddress: '18PzpUFkFZE8zKWUPvfykkTxmB9oMR8qP7',
+              toAddress: 't1h8SqgtM3QM5e2M8EzhhT1yL2PXXtA6oqe',
               amount: 0.8e8
             }],
             feePerKb: 100e2
@@ -488,7 +488,7 @@ describe('Email notifications', function() {
         helpers.stubUtxos(server, wallet, [1, 1], function() {
           var txOpts = {
             outputs: [{
-              toAddress: '18PzpUFkFZE8zKWUPvfykkTxmB9oMR8qP7',
+              toAddress: 't1h8SqgtM3QM5e2M8EzhhT1yL2PXXtA6oqe',
               amount: 0.8e8
             }],
             feePerKb: 100e2

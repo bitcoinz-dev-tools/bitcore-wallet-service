@@ -54,13 +54,7 @@ var config = {
         // Multiple servers (in priority order)
         // url: ['http://a.b.c', 'https://test-insight.bitpay.com:443'],
       },
-    },
-    bch: {
-      livenet: {
-        provider: 'insight',
-        url: 'https://bch-insight.bitpay.com',
-      },
-    },
+    }
   },
   pushNotificationsOpts: {
     templatePath: './lib/templates',

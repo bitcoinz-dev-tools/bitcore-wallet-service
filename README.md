@@ -1,5 +1,5 @@
 
-# bitcore-wallet-service-btcz
+# bitcore-wallet-service
 
 [![NPM Package](https://img.shields.io/npm/v/bitcore-wallet-service.svg?style=flat-square)](https://www.npmjs.org/package/bitcore-wallet-service)
 [![Build Status](https://img.shields.io/travis/bitcoinz-wallets/bitcore-wallet-service-btcz.svg?branch=master&style=flat-square)](https://travis-ci.org/bitcoinz-wallets/bitcore-wallet-service-btcz)
@@ -21,8 +21,8 @@ More about BWS at https://blog.bitpay.com/announcing-the-bitcore-wallet-suite/
 
 # Getting Started
 ```
- git clone https://github.com/bitcoinz-wallets/bitcore-wallet-service-btcz.git
- cd bitcore-wallet-service-btcz && npm start
+ git clone https://github.com/bitcoinz-dev-tools/bitcore-wallet-service.git
+ cd bitcore-wallet-service && npm start
 ```
 
 This will launch the BWS service (with default settings) at `http://localhost:3232/bws/api`.

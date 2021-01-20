@@ -131,7 +131,7 @@ describe('Bitcore Node Service', function() {
       var service = new Service(options);
       var config = service._getConfiguration();
       config.blockchainExplorerOpts.testnet.should.deep.equal({
-        'apiPrefix': '/insight-api-api',
+        'apiPrefix': '/insight-api-btcz',
         'provider': 'insight',
         'url': 'http://localhost:3001'
       });

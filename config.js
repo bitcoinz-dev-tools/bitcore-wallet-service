@@ -41,11 +41,11 @@ var config = {
     btcz: {
       livenet: {
         provider: 'insight',
-        url: 'https://api.btcz.life:443',
+        url: 'https://explorer.btcz.app',
       },
       testnet: {
         provider: 'insight',
-        url: 'http://testnet.explorer.btcz.life:3002',
+        url: 'http://test.explorer.btcz.app',
       },
     }
   },

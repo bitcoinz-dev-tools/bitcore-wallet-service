@@ -4,21 +4,11 @@ The following document is a step-by-step guide to run BWS.
 Ensure MongoDB (2.6+) is installed and running. This document assumes that mongod is running at the default port 27017.
 See the configuration section to configure a different host/port.
 
-### Install BWS from NPM
-Use the following steps to Install BWS from the npmjs repository and run it with defaults.
-```bash
-npm install bitcore-wallet-service
-cd bitcore-wallet-service
-```
-To change configuration before running, see the Configuration section.
-```bash
-npm start
-```
 
 ### Install BWS from github source
 Use the following steps to Install BWS from github source and run it with defaults.
 ```bash
-git clone https://github.com/bitpay/bitcore-wallet-service.git
+git clone https://github.com/bitcoinz-dev-tools/bitcore-wallet-service.git
 cd bitcore-wallet-service
 npm install
 ```
@@ -73,11 +63,11 @@ An example of this configuration is:
   blockchainExplorerOpts: {
     livenet: {
       provider: 'insight',
-      url: 'https://insight.bitpay.com:443',
+      url: 'http://test.explorer.btcz.app',
     },
     testnet: {
       provider: 'insight',
-      url: 'https://test-insight.bitpay.com:443',
+      url: 'http://test.explorer.btcz.app',
     },
   }
 ```
@@ -102,4 +92,3 @@ Change `config.js` file to enable and configure clustering:
   clusterInstances: 4,
 }
 ```
-

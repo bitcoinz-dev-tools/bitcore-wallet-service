@@ -20,7 +20,7 @@
     "url": "https://github.com/bitcoinz-wallets/bitcore-wallet-service/issues"
   },
   "dependencies": {
-    "async": "^0.9.2",
+    "async": "^2.6.4",
     "bitcore-lib-btcz": "bitcoinz-wallets/bitcore-lib-btcz",
     "bitcore-lib-cash": "https://github.com/bitpay/bitcore-lib.git#cash",
     "body-parser": "^1.11.0",
